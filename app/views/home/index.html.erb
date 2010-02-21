@@ -1,0 +1,10 @@
+<h2>toDo:s</h2>
+<ul>
+  <% for todo in @todos %>
+    <li>
+      <h3><%= todo.title %></h3>
+      <p><%= todo.description %></p>
+    </li>
+  <% end %>
+</ul>
+<%= link_to "new todo", new_todo_path %>
