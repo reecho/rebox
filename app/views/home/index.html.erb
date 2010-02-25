@@ -2,8 +2,13 @@
 <ul>
   <% for todo in @todos %>
     <li>
-      <h3><%= todo.title %></h3>
+      <h3><%= link_to "#{todo.title}", edit_todo_path(todo) %>
+      </h3>
       <p><%= todo.description %></p>
+      <p><%= todo.priority %></p>
+      <p><%= link_to "remove", todo_path(todo),
+             :method => :delete %></p>
+
     </li>
   <% end %>
 </ul>

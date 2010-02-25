@@ -24,5 +24,4 @@
   </p>
 <% end %>
 
-<%= link_to 'Show', @todo %> |
-<%= link_to 'Back', todos_path %>
+<%= link_to "remove", todo_path(@todo), :method => :delete %>
