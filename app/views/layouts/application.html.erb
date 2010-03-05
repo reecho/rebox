@@ -3,12 +3,14 @@
   <head>
     <title></title>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
-    <%= stylesheet_link_tag "reset", "forms", "scaffold", "typography", "application" %>
+    <%= stylesheet_link_tag "reset", "forms", "scaffold", "typography", "grid", "application" %>
     <!--[if lt IE 8]>
     <link rel="stylesheet" href="ie.css" type="text/css" media="screen, projection">
-    <![endif]-->
+      <![endif]-->
   </head>
   <body>
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>

@@ -1,15 +1,23 @@
-<h2>toDo:s</h2>
-<ul>
-  <% for todo in @todos %>
-    <li>
-      <h3><%= link_to "#{todo.title}", edit_todo_path(todo) %>
-      </h3>
-      <p><%= todo.description %></p>
-      <p><%= todo.priority %></p>
-      <p><%= link_to "remove", todo_path(todo),
-             :method => :delete %></p>
+<div class="span-8">
+  <h2>data</h2>
+  <a href="http://www.wikipedia.org">wikipedia</a>
+</div>
 
-    </li>
-  <% end %>
-</ul>
-<%= link_to "new todo", new_todo_path %>
+<div class="span-16 last">
+  <h2>toDo:s</h2>
+  <ul>
+    <% for todo in @todos %>
+      <li>
+        <h3><%= link_to "#{todo.title}", edit_todo_path(todo),
+                :class => "title" %></h3>
+        <p><%= todo.description %></p>
+        <p><%= todo.priority %></p>
+        <p><%= link_to "remove", todo_path(todo),
+               :method => :delete %></p>
+      </li>
+    <% end %>
+  </ul>
+
+  <%= link_to "+", new_todo_path, :class => "plus" %>
+</div>
+
